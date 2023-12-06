@@ -32,3 +32,10 @@ template_engine: erb
 # timezone: America/Los_Angeles
 # pagination:
 #   enabled: true
+
+collections:
+  chapters:
+    output: true
+    sort_by: day
+    sort_direction: ascending
+    permalink: /:collection/:title.*
