@@ -1,0 +1,10 @@
+<div class="entry">
+  <span><%= scenario_name %></span>
+  <% unless next_entries.empty? %>
+    <div class="branch">
+      <% next_entries.each do |next_entry| %>
+        <%= render ScenarioTreeEntry.new(scenario: site.data.scenarios[next_entry.to_s]) %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
