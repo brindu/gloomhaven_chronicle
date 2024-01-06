@@ -1,6 +1,9 @@
 #tree {
   display: inline-block;
   padding: 10px;
+  max-width: 100%; /* Set to 100% of the parent container's width */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  box-sizing: border-box; /* To include padding in the width calculation */
 }
 
 #tree * {
