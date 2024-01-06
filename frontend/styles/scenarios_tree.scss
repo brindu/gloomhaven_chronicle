@@ -18,7 +18,7 @@
 #tree .branch:not(:first-child):after {
   content: "";
   width: 20px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid;
   position: absolute;
   left: 150px;
   top: 50%;
@@ -27,14 +27,15 @@
 
 .entry {
   position: relative;
-  min-height: 42px;
+  min-height: 60px;
   display: block;
 }
 
 .entry:before {
+  border-color: var(--border);
   content: "";
   height: 100%;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid;
   position: absolute;
   left: -20px;
 }
@@ -53,10 +54,11 @@
 }
 
 .entry:after {
+  border-color: var(--border);
   content: "";
   width: 20px;
   transition: border 0.5s;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid;
   position: absolute;
   left: -20px;
   top: 50%;
@@ -72,7 +74,7 @@
   height: 10px;
   border-top: none;
   transition: border 0.5s;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid;
   border-radius: 0 0 0 10px;
   margin-top: -9px;
 }
@@ -89,7 +91,8 @@
 }
 
 .entry span {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
+  color: var(--text);
   display: block;
   min-width: 150px;
   padding: 5px 10px;
@@ -99,7 +102,6 @@
   left: 0;
   top: 50%;
   margin-top: -15px;
-  color: #666;
   font-family: arial, verdana, tahoma;
   font-size: 14px;
   display: inline-block;
@@ -107,16 +109,10 @@
   transition: all 0.5s;
 }
 
-#tree .entry span:hover,
-#tree .entry span:hover + .branch .entry span {
-  background: #e6e6e6;
-  color: #000;
-  border-color: #a6a6a6;
+.success {
+  background-color: var(--accent-bg);
 }
 
-#tree .entry span:hover + .branch .entry::after,
-#tree .entry span:hover + .branch .entry::before,
-#tree .entry span:hover + .branch::before,
-#tree .entry span:hover + .branch .branch::before {
-  border-color: #a6a6a6;
+.not_tried {
+  background-color: var(--bg);
 }

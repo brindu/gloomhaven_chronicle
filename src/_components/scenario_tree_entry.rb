@@ -12,4 +12,8 @@ class ScenarioTreeEntry < ApplicationComponent
   def next_entries
     scenario.links
   end
+
+  def state
+    scenario.state
+  end
 end
