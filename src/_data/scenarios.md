@@ -40,8 +40,9 @@
 
 8:
   name: Gloomhaven Warehouse
-  state: not_tried
-  links: []
+  state: success
+  treasures: 1
+  links: [7, 13]
 
 9:
   name: Diamond Mine
@@ -50,6 +51,11 @@
 
 10:
   name: Plane of Elemental Power
+  state: not_tried
+  links: []
+
+13:
+  name: Temple of the Seer
   state: not_tried
   links: []
 
