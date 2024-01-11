@@ -112,10 +112,17 @@
   transition: all 0.5s;
 }
 
-.success {
+/* Dungeons status */
+.entry > span.success {
   background-color: var(--accent-bg);
 }
 
-.not_tried {
+.entry > span.not_tried {
   background-color: var(--bg);
 }
+
+.entry > span.not_doable {
+  color: var(--text-light);
+  background-color: var(--preformatted);
+}
+

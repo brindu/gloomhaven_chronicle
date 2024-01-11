@@ -46,7 +46,7 @@
 
 9:
   name: Diamond Mine
-  state: not_tried
+  state: not_doable
   links: []
 
 10:
