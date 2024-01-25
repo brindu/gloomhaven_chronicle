@@ -67,10 +67,22 @@
 
 19:
   name: Forgotten Crypt
-  state: not_tried
-  links: []
+  state: success
+  treasures: 1
+  links: [27, 52]
 
 31:
   name: Plane of Night
+  state: not_tried
+  links: []
+
+27:
+  name: Ruinous Rift
+  state: not_tried
+  treasures: 0
+  links: []
+
+52:
+  name: Noxious Cellar
   state: not_tried
   links: []
