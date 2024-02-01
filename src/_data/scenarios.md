@@ -30,7 +30,8 @@
 
 6:
   name: Decaying Crypt
-  state: not_tried
+  state: success
+  treasures: 1
   links: []
 
 7:
