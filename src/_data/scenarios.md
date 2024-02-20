@@ -85,5 +85,10 @@
 
 52:
   name: Noxious Cellar
+  state: success
+  links: [53]
+
+53:
+  name: Crypt basement
   state: not_tried
   links: []
