@@ -52,7 +52,7 @@
 
 10:
   name: Plane of Elemental Power
-  state: not_tried
+  state: not_doable
   links: []
 
 13:
@@ -79,7 +79,7 @@
 
 27:
   name: Ruinous Rift
-  state: not_tried
+  state: success
   treasures: 0
   links: []
 
