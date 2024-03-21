@@ -36,8 +36,8 @@
 
 7:
   name: Vibrant Grotto
-  state: not_tried
-  links: []
+  state: success
+  links: [20]
 
 8:
   name: Gloomhaven Warehouse
@@ -71,6 +71,11 @@
   state: success
   treasures: 1
   links: [27, 52]
+
+20:
+  name: Necromancer's Sanctum
+  state: not_tried
+  links: []
 
 31:
   name: Plane of Night
