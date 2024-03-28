@@ -95,5 +95,11 @@
 
 53:
   name: Crypt basement
-  state: not_tried
+  state: success
+  treasures: 1
+  links: [54]
+
+54: 
+  name: Palace of Ice
+  state: not_tried 
   links: []
