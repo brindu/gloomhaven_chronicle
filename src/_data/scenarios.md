@@ -66,6 +66,16 @@
   treasures: 0
   links: []
 
+16:
+  name: Mountain Pass
+  state: not_tried
+  links: []
+
+18:
+  name: Abandoned Sewers
+  state: not_tried
+  links: []
+
 19:
   name: Forgotten Crypt
   state: success
@@ -74,18 +84,24 @@
 
 20:
   name: Necromancer's Sanctum
+  state: success
+  treasures: 1
+  links: [16, 18, 28]
+
+27:
+  name: Ruinous Rift
+  state: success
+  treasures: 0
+  links: []
+
+28:
+  name: Outer Ritual Chamber
   state: not_tried
   links: []
 
 31:
   name: Plane of Night
   state: not_tried
-  links: []
-
-27:
-  name: Ruinous Rift
-  state: success
-  treasures: 0
   links: []
 
 52:
@@ -99,7 +115,7 @@
   treasures: 1
   links: [54]
 
-54: 
+54:
   name: Palace of Ice
-  state: not_tried 
+  state: not_tried
   links: []
