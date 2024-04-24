@@ -117,5 +117,5 @@
 
 54:
   name: Palace of Ice
-  state: not_tried
+  state: success
   links: []
