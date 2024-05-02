@@ -57,8 +57,8 @@
 
 13:
   name: Temple of the Seer
-  state: not_tried
-  links: []
+  state: success
+  links: [17]
 
 14:
   name: Frozen Hollow
@@ -68,6 +68,11 @@
 
 16:
   name: Mountain Pass
+  state: not_tried
+  links: []
+
+17:
+  name: Lost Island
   state: not_tried
   links: []
 
