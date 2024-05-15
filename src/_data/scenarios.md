@@ -73,7 +73,7 @@
 
 17:
   name: Lost Island
-  state: not_tried
+  state: success
   links: []
 
 18:
