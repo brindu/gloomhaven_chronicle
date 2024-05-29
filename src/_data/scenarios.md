@@ -68,8 +68,9 @@
 
 16:
   name: Mountain Pass
-  state: not_tried
-  links: []
+  state: success
+  treasures: 1
+  links: [24, 25]
 
 17:
   name: Lost Island
@@ -92,6 +93,16 @@
   state: success
   treasures: 1
   links: [16, 18, 28]
+
+24:
+  name: Echo Chamber
+  state: not_tried
+  links: []
+
+25:
+  name: Icecrag Ascent
+  state: not_tried
+  links: []
 
 27:
   name: Ruinous Rift
