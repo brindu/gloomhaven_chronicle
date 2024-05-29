@@ -96,8 +96,8 @@
 
 24:
   name: Echo Chamber
-  state: not_tried
-  links: []
+  state: success
+  links: [30, 32]
 
 25:
   name: Icecrag Ascent
@@ -112,6 +112,16 @@
 
 28:
   name: Outer Ritual Chamber
+  state: not_tried
+  links: []
+
+30:
+  name: Shrine of the Depths
+  state: not_tried
+  links: []
+
+32:
+  name: Decrepit Wood
   state: not_tried
   links: []
 
