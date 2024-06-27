@@ -117,8 +117,8 @@
 
 30:
   name: Shrine of the Depths
-  state: not_tried
-  links: []
+  state: success
+  links: [42]
 
 32:
   name: Decrepit Wood
@@ -127,6 +127,11 @@
 
 31:
   name: Plane of Night
+  state: not_tried
+  links: []
+
+42:
+  name: Realm of the Voice
   state: not_tried
   links: []
 
