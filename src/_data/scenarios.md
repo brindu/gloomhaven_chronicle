@@ -79,8 +79,8 @@
 
 18:
   name: Abandoned Sewers
-  state: not_tried
-  links: []
+  state: success
+  links: [23, 26, 43]
 
 19:
   name: Forgotten Crypt
@@ -94,6 +94,11 @@
   treasures: 1
   links: [16, 18, 28]
 
+23:
+  name: Deep ruins
+  state: not_tried
+  links: []
+
 24:
   name: Echo Chamber
   state: success
@@ -101,6 +106,11 @@
 
 25:
   name: Icecrag Ascent
+  state: success
+  links: [33, 34]
+
+26:
+  name: Ancient Cistern
   state: not_tried
   links: []
 
@@ -112,6 +122,11 @@
 
 28:
   name: Outer Ritual Chamber
+  state: success
+  links: [29]
+
+29:
+  name: Sanctuary of Gloom
   state: not_tried
   links: []
 
@@ -120,18 +135,33 @@
   state: success
   links: [42]
 
-32:
-  name: Decrepit Wood
-  state: not_tried
-  links: []
-
 31:
   name: Plane of Night
   state: not_tried
   links: []
 
+32:
+  name: Decrepit Wood
+  state: not_doable
+  links: []
+
+33:
+  name: Savvas Armory
+  state: not_tried
+  links: []
+
+34:
+  name: Scorched Summit
+  state: not_tried
+  links: []
+
 42:
   name: Realm of the Voice
+  state: success
+  links: []
+
+43:
+  name: Drake Nest
   state: not_tried
   links: []
 
