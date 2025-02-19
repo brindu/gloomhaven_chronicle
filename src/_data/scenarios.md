@@ -96,7 +96,7 @@
 
 23:
   name: Deep ruins
-  state: not_tried
+  state: success
   links: []
 
 24:
