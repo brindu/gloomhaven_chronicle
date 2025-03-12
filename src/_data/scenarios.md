@@ -94,6 +94,11 @@
   treasures: 1
   links: [16, 18, 28]
 
+22:
+  name: Temple of the Elements
+  state: not_tried
+  links: []
+
 23:
   name: Deep ruins
   state: success
@@ -111,8 +116,8 @@
 
 26:
   name: Ancient Cistern
-  state: not_tried
-  links: []
+  state: success
+  links: [22]
 
 27:
   name: Ruinous Rift
