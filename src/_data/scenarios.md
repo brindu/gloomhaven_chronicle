@@ -152,12 +152,12 @@
 
 33:
   name: Savvas Armory
-  state: not_tried
+  state: not_doable
   links: []
 
 34:
   name: Scorched Summit
-  state: not_tried
+  state: success
   links: []
 
 42:
@@ -167,7 +167,7 @@
 
 43:
   name: Drake Nest
-  state: not_tried
+  state: success
   links: []
 
 52:
