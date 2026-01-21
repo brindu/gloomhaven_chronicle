@@ -96,8 +96,8 @@
 
 22:
   name: Temple of the Elements
-  state: not_tried
-  links: []
+  state: success
+  links: [31, 35, 36]
 
 23:
   name: Deep ruins
@@ -132,7 +132,7 @@
 
 29:
   name: Sanctuary of Gloom
-  state: not_tried
+  state: success
   links: []
 
 30:
@@ -158,6 +158,16 @@
 34:
   name: Scorched Summit
   state: success
+  links: []
+
+35:
+  name: Gloomhaven Battlements A
+  state: not_tried
+  links: []
+
+36:
+  name: Gloomhaven Battlements B
+  state: not_tried
   links: []
 
 42:
