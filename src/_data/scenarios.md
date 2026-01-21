@@ -162,12 +162,12 @@
 
 35:
   name: Gloomhaven Battlements A
-  state: not_tried
+  state: not_doable
   links: []
 
 36:
   name: Gloomhaven Battlements B
-  state: not_tried
+  state: not_doable
   links: []
 
 42:
