@@ -149,3 +149,49 @@ $entry-height: 80px;
   color: #c89a9a;
   opacity: 0.65;
 }
+
+// --- Mobile ---
+
+$node-width-sm: 120px;
+$branch-gap-sm: 14px;
+$entry-height-sm: 60px;
+
+@media (max-width: 768px) {
+  #tree {
+    padding: 0.75rem;
+  }
+
+  #tree .branch {
+    padding: 4px 0 4px $branch-gap-sm;
+  }
+
+  #tree .branch:not(:first-child) {
+    margin-left: $node-width-sm + $branch-gap-sm;
+  }
+
+  #tree .branch:not(:first-child):after {
+    width: $branch-gap-sm;
+    left: $node-width-sm;
+  }
+
+  .entry {
+    min-height: $entry-height-sm;
+  }
+
+  .entry:before {
+    left: -$branch-gap-sm;
+  }
+
+  .entry:after {
+    width: $branch-gap-sm;
+    left: -$branch-gap-sm;
+  }
+
+  .entry span {
+    min-width: $node-width-sm;
+    max-width: $node-width-sm + 30px;
+    padding: 5px 8px;
+    font-size: 0.55rem;
+    letter-spacing: 0.02em;
+  }
+}
