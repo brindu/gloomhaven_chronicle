@@ -66,6 +66,11 @@
   treasures: 0
   links: []
 
+15:
+  name: Shrine of Strength
+  state: not_tried
+  links: []
+
 16:
   name: Mountain Pass
   state: success
@@ -142,8 +147,8 @@
 
 31:
   name: Plane of Night
-  state: not_tried
-  links: []
+  state: success
+  links: [37, 38, 39]
 
 32:
   name: Decrepit Wood
@@ -170,6 +175,21 @@
   state: not_doable
   links: []
 
+37:
+  name: Doom Trench
+  state: not_tried
+  links: []
+
+38:
+  name: Slave Pens
+  state: not_tried
+  links: []
+
+39:
+  name: Treacherous Divide
+  state: success
+  links: [15, 46]
+
 42:
   name: Realm of the Voice
   state: success
@@ -178,6 +198,11 @@
 43:
   name: Drake Nest
   state: success
+  links: []
+
+46:
+  name: Nightmare Peak
+  state: not_tried
   links: []
 
 52:
