@@ -30,7 +30,7 @@ $entry-height: 80px;
 #tree .branch:not(:first-child):after {
   content: "";
   width: $branch-gap;
-  border-top: 1px solid var(--accent-dim);
+  border-top: 1px solid #8a7040;
   position: absolute;
   left: $node-width;
   top: 50%;
@@ -44,7 +44,7 @@ $entry-height: 80px;
 }
 
 .entry:before {
-  border-color: var(--accent-dim);
+  border-color: #8a7040;
   content: "";
   height: 100%;
   border-left: 1px solid;
@@ -66,7 +66,7 @@ $entry-height: 80px;
 }
 
 .entry:after {
-  border-color: var(--accent-dim);
+  border-color: #8a7040;
   content: "";
   width: $branch-gap;
   transition: border 0.5s;
@@ -104,8 +104,8 @@ $entry-height: 80px;
 }
 
 .entry span {
-  border: 1px solid var(--border-light);
-  color: var(--text);
+  border: 1px solid #5a5040;
+  color: var(--text-bright);
   display: inline-block;
   min-width: $node-width;
   max-width: $node-width + 40px;
@@ -121,7 +121,7 @@ $entry-height: 80px;
   letter-spacing: 0.04em;
   border-radius: var(--radius);
   transition: all 0.3s ease;
-  background: var(--bg-elevated);
+  background: #2a2518;
 }
 
 .entry span:hover {
@@ -132,22 +132,21 @@ $entry-height: 80px;
 // --- Scenario States ---
 
 .entry > span.success {
-  background: var(--success-bg);
-  border-color: var(--success);
-  color: #a0d4a0;
+  background: #1a3320;
+  border-color: #4a9a4a;
+  color: #c8f0c8;
 }
 
 .entry > span.not_tried {
-  background: var(--bg-surface);
-  border-color: var(--border-light);
-  color: var(--text-dim);
+  background: #28261e;
+  border-color: #6a6050;
+  color: #d8ccb4;
 }
 
 .entry > span.not_doable {
-  background: var(--danger-bg);
-  border-color: var(--danger);
-  color: #c89a9a;
-  opacity: 0.65;
+  background: #301818;
+  border-color: #b06060;
+  color: #ecc0c0;
 }
 
 // --- Mobile ---
