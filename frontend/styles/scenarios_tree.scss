@@ -3,6 +3,10 @@
 // Glowing nodes, amber connector lines
 // ============================================
 
+$node-width: 180px;
+$branch-gap: 20px;
+$entry-height: 80px;
+
 #tree {
   display: inline-block;
   padding: 1.5rem;
@@ -16,26 +20,26 @@
 }
 
 #tree .branch {
-  padding: 5px 0 5px 20px;
+  padding: 8px 0 8px $branch-gap;
 }
 
 #tree .branch:not(:first-child) {
-  margin-left: 170px;
+  margin-left: $node-width + $branch-gap;
 }
 
 #tree .branch:not(:first-child):after {
   content: "";
-  width: 20px;
+  width: $branch-gap;
   border-top: 1px solid var(--accent-dim);
   position: absolute;
-  left: 150px;
+  left: $node-width;
   top: 50%;
   margin-top: 1px;
 }
 
 .entry {
   position: relative;
-  min-height: 60px;
+  min-height: $entry-height;
   display: block;
 }
 
@@ -45,7 +49,7 @@
   height: 100%;
   border-left: 1px solid;
   position: absolute;
-  left: -20px;
+  left: -$branch-gap;
 }
 
 .entry:first-child:after {
@@ -64,11 +68,11 @@
 .entry:after {
   border-color: var(--accent-dim);
   content: "";
-  width: 20px;
+  width: $branch-gap;
   transition: border 0.5s;
   border-top: 1px solid;
   position: absolute;
-  left: -20px;
+  left: -$branch-gap;
   top: 50%;
   margin-top: 1px;
 }
@@ -102,19 +106,19 @@
 .entry span {
   border: 1px solid var(--border-light);
   color: var(--text);
-  display: block;
-  min-width: 150px;
-  padding: 6px 12px;
-  line-height: 20px;
+  display: inline-block;
+  min-width: $node-width;
+  max-width: $node-width + 40px;
+  padding: 8px 14px;
+  line-height: 1.3;
   text-align: center;
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: -17px;
+  transform: translateY(-50%);
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.04em;
-  display: inline-block;
   border-radius: var(--radius);
   transition: all 0.3s ease;
   background: var(--bg-elevated);
