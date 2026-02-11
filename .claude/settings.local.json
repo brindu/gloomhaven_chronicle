@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/brindu/Projets/gloomhaven_chronicle log --oneline --max-count=15)"
+    ]
+  }
+}
