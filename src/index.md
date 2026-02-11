@@ -1,9 +1,11 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-
 layout: default
 ---
 
-# Welcome to the chronicles of Croaky's Waste Management Services
+<img src="/images/logo.svg" alt="Croaky's Waste Management Services" class="hero-logo">
 
-Have a look at their adventures [here](/chapters)!
+# Croaky's Waste Management Services
+
+The diary of a misfit band of mercenaries navigating the dark dungeons, treacherous politics, and questionable moral choices of Gloomhaven.
+
+<a href="/chapters" class="cta">Read the Chronicles</a>

@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C /Users/brindu/Projets/gloomhaven_chronicle log --oneline --max-count=15)"
+      "Bash(git -C /Users/brindu/Projets/gloomhaven_chronicle log --oneline --max-count=15)",
+      "Bash(bundle exec bridgetown build:*)",
+      "Bash(npx sass:*)",
+      "Bash(bin/bridgetown start:*)"
     ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true
   }
 }

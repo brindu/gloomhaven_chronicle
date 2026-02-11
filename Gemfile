@@ -21,6 +21,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # and then run `bundle update bridgetown`
 gem "bridgetown", "~> 1.3.1"
 
+gem "logger"
+gem "csv"
+gem "ostruct"
+gem "bigdecimal"
+gem "mutex_m"
+gem "drb"
+gem "base64"
+
 # Uncomment to add file-based dynamic routing to your project:
 # gem "bridgetown-routes", "~> 1.3.1"
 

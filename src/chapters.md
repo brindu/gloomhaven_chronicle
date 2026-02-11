@@ -3,10 +3,13 @@ layout: page
 title: Chapters
 ---
 
-<ul>
+<ul class="chapter-list">
   <% collections.chapters.resources.each do |chapter| %>
     <li>
-      <a href="<%= chapter.relative_url %>">Day <%= chapter.data.day %> - <%= chapter.data.title %></a>
+      <a href="<%= chapter.relative_url %>">
+        <span class="day">Day <%= chapter.data.day %></span>
+        <span class="title"><%= chapter.data.title %></span>
+      </a>
     </li>
   <% end %>
 </ul>
