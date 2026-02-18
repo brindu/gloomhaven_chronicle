@@ -68,7 +68,7 @@
 
 15:
   name: Shrine of Strength
-  state: not_tried
+  state: success
   links: []
 
 16:
