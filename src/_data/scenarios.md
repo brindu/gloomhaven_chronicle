@@ -183,7 +183,7 @@
 38:
   name: Slave Pens
   state: not_tried
-  links: []
+  links: [44, 48]
 
 39:
   name: Treacherous Divide
@@ -200,8 +200,18 @@
   state: success
   links: []
 
+44:
+  name: Tribal Assault
+  state: not_tried
+  links: []
+
 46:
   name: Nightmare Peak
+  state: not_tried
+  links: []
+
+48:
+  name: Shadow Weald
   state: not_tried
   links: []
 
