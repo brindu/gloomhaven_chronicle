@@ -182,7 +182,7 @@
 
 38:
   name: Slave Pens
-  state: not_tried
+  state: success
   links: [44, 48]
 
 39:
