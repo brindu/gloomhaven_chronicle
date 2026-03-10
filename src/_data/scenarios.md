@@ -202,7 +202,7 @@
 
 44:
   name: Tribal Assault
-  state: not_tried
+  state: success
   links: []
 
 46:
