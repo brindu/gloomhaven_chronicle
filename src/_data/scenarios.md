@@ -177,8 +177,8 @@
 
 37:
   name: Doom Trench
-  state: not_tried
-  links: []
+  state: success
+  links: [47]
 
 38:
   name: Slave Pens
@@ -207,6 +207,11 @@
 
 46:
   name: Nightmare Peak
+  state: not_tried
+  links: []
+
+47:
+  name: Lair of the Unseeing Eye
   state: not_tried
   links: []
 
