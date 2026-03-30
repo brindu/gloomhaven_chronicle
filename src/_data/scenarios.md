@@ -217,7 +217,7 @@
 
 48:
   name: Shadow Weald
-  state: success
+  state: not_tried
   links: []
 
 52:
