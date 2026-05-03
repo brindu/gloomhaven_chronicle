@@ -207,16 +207,21 @@
 
 46:
   name: Nightmare Peak
-  state: not_tried
-  links: []
+  state: success
+  links: [51]
 
 47:
   name: Lair of the Unseeing Eye
-  state: not_tried
+  state: success
   links: []
 
 48:
   name: Shadow Weald
+  state: not_tried
+  links: []
+
+51:
+  name: The Void
   state: not_tried
   links: []
 
