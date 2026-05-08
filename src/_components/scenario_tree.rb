@@ -13,13 +13,14 @@ class ScenarioTree < ApplicationComponent
 
   attr_reader :nodes, :edges, :width, :height
 
-  def initialize(root:)
-    @root = root
+  def initialize(root_id:)
+    @root_id = root_id.to_s
     @nodes = []
     @edges = []
     @leaf_cursor = 0
     @max_depth = 0
-    layout(@root, 0)
+    @laid_out = {}
+    layout(@root_id, 0)
     @width  = (@max_depth * COL_W) + NODE_W + (PAD_X * 2)
     @height = (@leaf_cursor * ROW_H) + (PAD_Y * 2)
   end
@@ -30,17 +31,32 @@ class ScenarioTree < ApplicationComponent
 
   private
 
-  def layout(scenario, depth)
+  def layout(id, depth)
     @max_depth = depth if depth > @max_depth
-    children = Array(scenario.links).map { |id| site.data.scenarios[id.to_s] }.compact
-    child_nodes = children.map { |c| layout(c, depth + 1) }
+    return @laid_out[id] if @laid_out.key?(id)
 
-    y = if child_nodes.empty?
+    scenario = site.data.scenarios[id]
+    return nil if scenario.nil?
+
+    children_ids = Array(scenario.links).map(&:to_s).select { |cid| site.data.scenarios.key?(cid) }
+    own_children = []
+    cross_children = []
+    children_ids.each do |cid|
+      if @laid_out.key?(cid)
+        cross_children << @laid_out[cid]
+      else
+        node = layout(cid, depth + 1)
+        own_children << node if node
+      end
+    end
+
+    y = if own_children.empty?
           row = @leaf_cursor
           @leaf_cursor += 1
           PAD_Y + (row * ROW_H) + (ROW_H / 2.0)
         else
-          (child_nodes.first.y + child_nodes.last.y) / 2.0
+          ys = own_children.map(&:y)
+          (ys.min + ys.max) / 2.0
         end
 
     x = PAD_X + (depth * COL_W)
@@ -52,9 +68,10 @@ class ScenarioTree < ApplicationComponent
       name_lines: wrap_name(scenario.name),
     )
     @nodes << node
+    @laid_out[id] = node
 
     parent_anchor_x = x + NODE_W
-    child_nodes.each do |c|
+    (own_children + cross_children).each do |c|
       @edges << Edge.new(x1: parent_anchor_x, y1: y, x2: c.x, y2: c.y)
     end
 
