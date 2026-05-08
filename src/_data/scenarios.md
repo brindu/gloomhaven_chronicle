@@ -213,12 +213,12 @@
 47:
   name: Lair of the Unseeing Eye
   state: success
-  links: []
+  links: [51]
 
 48:
   name: Shadow Weald
   state: not_tried
-  links: []
+  links: [51]
 
 51:
   name: The Void

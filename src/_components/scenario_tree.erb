@@ -1,3 +1,32 @@
-<div id="tree">
-  <%= render ScenarioTreeEntry.new(scenario: root) %>
+<div class="scenario-tree">
+  <svg class="scenario-tree__svg"
+       xmlns="http://www.w3.org/2000/svg"
+       width="<%= width %>"
+       height="<%= height %>"
+       viewBox="0 0 <%= width %> <%= height %>"
+       role="img"
+       aria-label="Scenario tree">
+    <% edges.each do |e| %>
+      <% cx = e.x1 + (e.x2 - e.x1) / 2.0 %>
+      <path class="scenario-tree__edge"
+            d="M <%= e.x1 %>,<%= e.y1 %> C <%= cx %>,<%= e.y1 %> <%= cx %>,<%= e.y2 %> <%= e.x2 %>,<%= e.y2 %>" />
+    <% end %>
+    <% nodes.each do |n| %>
+      <g class="scenario-tree__node scenario-tree__node--<%= n.state %>"
+         transform="translate(<%= n.x %>,<%= n.y - ScenarioTree::NODE_H / 2.0 %>)">
+        <rect width="<%= ScenarioTree::NODE_W %>"
+              height="<%= ScenarioTree::NODE_H %>"
+              rx="3"
+              ry="3" />
+        <text class="scenario-tree__node-text"
+              x="<%= ScenarioTree::NODE_W / 2.0 %>"
+              y="<%= text_start_y(n.name_lines.size) %>"
+              text-anchor="middle">
+          <% n.name_lines.each_with_index do |line, i| %>
+            <tspan x="<%= ScenarioTree::NODE_W / 2.0 %>" dy="<%= i.zero? ? 0 : ScenarioTree::LINE_DY %>"><%= line %></tspan>
+          <% end %>
+        </text>
+      </g>
+    <% end %>
+  </svg>
 </div>
