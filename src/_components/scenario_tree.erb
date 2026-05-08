@@ -23,7 +23,7 @@
               y="<%= text_start_y(n.name_lines.size) %>"
               text-anchor="middle">
           <% n.name_lines.each_with_index do |line, i| %>
-            <tspan x="<%= ScenarioTree::NODE_W / 2.0 %>"<%= i.zero? ? "" : %( dy="#{ScenarioTree::LINE_DY}") %>><%= line %></tspan>
+            <tspan x="<%= ScenarioTree::NODE_W / 2.0 %>" dy="<%= i.zero? ? 0 : ScenarioTree::LINE_DY %>"><%= line %></tspan>
           <% end %>
         </text>
       </g>

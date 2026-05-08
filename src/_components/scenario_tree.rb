@@ -62,19 +62,15 @@ class ScenarioTree < ApplicationComponent
   end
 
   def wrap_name(name)
+    return [name.to_s] if name.to_s.length <= WRAP_CHARS
     words = name.to_s.split
-    lines = []
-    current = ""
-    words.each do |w|
-      candidate = current.empty? ? w : "#{current} #{w}"
-      if candidate.length <= WRAP_CHARS
-        current = candidate
-      else
-        lines << current unless current.empty?
-        current = w
-      end
+    return words if words.size <= 1
+
+    best = (1...words.size).min_by do |i|
+      line1 = words[0...i].join(" ").length
+      line2 = words[i..].join(" ").length
+      [[line1, line2].max, (line1 - line2).abs]
     end
-    lines << current unless current.empty?
-    lines.size > 2 ? [lines.first, lines[1..].join(" ")] : lines
+    [words[0...best].join(" "), words[best..].join(" ")]
   end
 end
